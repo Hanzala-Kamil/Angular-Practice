@@ -1,0 +1,14 @@
+<div id="app-header">
+    <div class="hamberger" (click)="toggleSidebar()">
+        <span *ngIf="!isActive">☰</span>
+        <span *ngIf="isActive">✖</span>
+    </div>
+    <div class="overlay" [class.isActive]="isActive">
+        <ul class="unOrderList">
+            <li (click)="toggleSidebar()"><a routerLink="/page1">Page 1</a></li>
+            <li (click)="toggleSidebar()"><a routerLink="/page2">Page 2</a></li>
+            <li (click)="toggleSidebar()"><a routerLink="/page3">Page 3</a></li>
+        </ul>
+    </div>
+</div>
+<router-outlet></router-outlet>
